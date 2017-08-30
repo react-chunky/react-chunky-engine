@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for core/HtmlPlugin.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">All files</a> / <a href="index.html">core</a> HtmlPlugin.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">17.54% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>10/57</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">4.17% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/24</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">19.23% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>10/52</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict'
+&nbsp;
+let chalk = require('chalk')
+let requireFromString = require('require-from-string')
+let ejs = require('ejs')
+let path = require('path')
+let Ora = require('ora')
+let log = require('log-update')
+&nbsp;
+class HtmlPlugin {
+&nbsp;
+  constructor(context) {
+    this._context = context
+    this._startTime = new Date().getTime()
+    this._spinner = new Ora()
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  ge</span>t context() {
+<span class="cstat-no" title="statement not covered" >    return this._context</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  in</span>itializeIfNecessary(compilation) {
+<span class="cstat-no" title="statement not covered" >    if (this._carmel) {</span>
+<span class="cstat-no" title="statement not covered" >      return</span>
+    }
+&nbsp;
+    // We're only loading carmel once
+    const context = <span class="cstat-no" title="statement not covered" >this.context</span>
+    const bundle = <span class="cstat-no" title="statement not covered" >compilation.assets['carmel.js']</span>
+    const source = <span class="cstat-no" title="statement not covered" >bundle.source()</span>
+    const Carmel = <span class="cstat-no" title="statement not covered" >requireFromString(source).default</span>
+<span class="cstat-no" title="statement not covered" >    this._carmel = new Carmel(this.context)</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  ge</span>t spinner() {
+<span class="cstat-no" title="statement not covered" >    return chalk.gray.dim(this._spinner.frame())</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  ge</span>t carmel () {
+<span class="cstat-no" title="statement not covered" >    return this._carmel</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  ge</span>t startTime() {
+<span class="cstat-no" title="statement not covered" >    return this._startTime</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  lo</span>g(message) {
+<span class="cstat-no" title="statement not covered" >    log(`${chalk.bold("[Carmel]")} ${message}`)</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  on</span>Start() {
+<span class="cstat-no" title="statement not covered" >    this._startTime = new Date().getTime()</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  on</span>Done(done) {
+    const time = <span class="cstat-no" title="statement not covered" >this.endTime(this.startTime);</span>
+<span class="cstat-no" title="statement not covered" >    this.log(chalk.green("✔ Successfully built in ") + chalk.bold(time));</span>
+<span class="cstat-no" title="statement not covered" >    done &amp;&amp; done()</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  on</span>ModuleStart(module) {
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  on</span>ModuleFailure(module) {
+<span class="cstat-no" title="statement not covered" >    if (!module.resource) {</span>
+        // Ignore context logging
+<span class="cstat-no" title="statement not covered" >        return</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this.log(chalk.red("✘ ") +  chalk.gray(module.resource))</span>
+<span class="cstat-no" title="statement not covered" >    this.log(chalk.red(module.error))</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  on</span>ModuleSuccess(module) {
+<span class="cstat-no" title="statement not covered" >    if (!module.resource) {</span>
+      // Ignore context logging
+<span class="cstat-no" title="statement not covered" >      return</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this.log(chalk.green("Building ") + chalk.gray(module.resource))</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  en</span>dTime(startTime) {
+    const time = <span class="cstat-no" title="statement not covered" >new Date().getTime() - startTime</span>
+<span class="cstat-no" title="statement not covered" >    return (time &lt; 1000 ? time + "ms" : (parseFloat(time/1000).toFixed(2) + "s"))</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  in</span>jectPageHtml(compilation, data, done) {
+<span class="cstat-no" title="statement not covered" >    if (this.context.env.dev) {</span>
+<span class="cstat-no" title="statement not covered" >      data.html = ejs.render(data.html, {</span>
+        carmel: {
+          page: data.plugin.options.page,
+          dependencies: this.context.layout.props.dependencies || [],
+          pageHtml: ""
+        }
+      })
+<span class="cstat-no" title="statement not covered" >      done(null, data)</span>
+<span class="cstat-no" title="statement not covered" >      return</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this.initializeIfNecessary(compilation)</span>
+<span class="cstat-no" title="statement not covered" >    this.carmel.generatePage(data.plugin.options.page).</span>
+           then(<span class="fstat-no" title="function not covered" >(h</span>tml) =&gt; {
+<span class="cstat-no" title="statement not covered" >              data.html = ejs.render(data.html, {</span>
+                carmel: {
+                  page: data.plugin.options.page,
+                  dependencies: this.context.layout.props.dependencies || [],
+                  pageHtml: html
+                }
+              })
+<span class="cstat-no" title="statement not covered" >              done(null, data)</span>
+           }).
+           catch(<span class="fstat-no" title="function not covered" >(e</span>rror) =&gt; <span class="cstat-no" title="statement not covered" >done(error))</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  ap</span>ply(compiler) {
+<span class="cstat-no" title="statement not covered" >    compiler.plugin("compile", <span class="fstat-no" title="function not covered" >(p</span>arams) =&gt; <span class="cstat-no" title="statement not covered" >this.onStart())</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    compiler.plugin("compilation", <span class="fstat-no" title="function not covered" >(c</span>ompilation) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      compilation.plugin('html-webpack-plugin-before-html-processing',</span>
+<span class="fstat-no" title="function not covered" >                          (d</span>ata, done) =&gt; <span class="cstat-no" title="statement not covered" >this.injectPageHtml(compilation, data, done))</span>
+<span class="cstat-no" title="statement not covered" >      compilation.plugin('build-module', <span class="fstat-no" title="function not covered" >(m</span>odule) =&gt; <span class="cstat-no" title="statement not covered" >this.onModuleStart(module))</span></span>
+<span class="cstat-no" title="statement not covered" >      compilation.plugin('failed-module', <span class="fstat-no" title="function not covered" >(m</span>odule) =&gt; <span class="cstat-no" title="statement not covered" >this.onModuleFailure(module))</span></span>
+<span class="cstat-no" title="statement not covered" >      compilation.plugin('succeed-module', <span class="fstat-no" title="function not covered" >(m</span>odule) =&gt; <span class="cstat-no" title="statement not covered" >this.onModuleSuccess(module))</span></span>
+    })
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    compiler.plugin('emit', <span class="fstat-no" title="function not covered" >(c</span>ompilation, done) =&gt; <span class="cstat-no" title="statement not covered" >this.onDone(done))</span></span>
+  }
+}
+&nbsp;
+module.exports = HtmlPlugin
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Aug 30 2017 14:36:54 GMT+0300 (EEST)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

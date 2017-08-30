@@ -1,0 +1,9 @@
+name: home
+title: Welcome
+text:
+  title: TITLE
+components:
+- name: intro
+  text:
+    title: TITLE
+- name: intro

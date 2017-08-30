@@ -1,0 +1,21 @@
+{
+  "name": "testproduct",
+  "info": {
+    "locales" : ["en"]
+  },
+  "stack": {
+    "name": "teststack",
+    "layout": "default"
+  },
+  "web": {
+    "pages": [
+      { "name": "home" },
+      { "name": "about", "path": "about" }
+    ],
+    "menu": [
+      { "page": "home" },
+      { "page": "about" },
+      { "title": "Resources", "link": "dummy" }
+    ]
+  }
+}

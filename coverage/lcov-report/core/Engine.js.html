@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for core/Engine.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">All files</a> / <a href="index.html">core</a> Engine.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">24.32% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>9/37</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">10% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">24.32% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>9/37</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict'
+&nbsp;
+let path = require('path')
+let fs = require('fs-extra')
+let webpack = require('webpack')
+let config = require('../config')
+let WebpackDevServer  = require('webpack-dev-server')
+let bindi = require('bindi')
+&nbsp;
+class Engine {
+&nbsp;
+  constructor(context) {
+    this._context = context
+    this._config = config(context)
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  ge</span>t context() {
+<span class="cstat-no" title="statement not covered" >    return this._context</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  ge</span>t config() {
+<span class="cstat-no" title="statement not covered" >    return this._config</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  cl</span>ean() {
+<span class="cstat-no" title="statement not covered" >    if (!fs.existsSync(this.context.product.build.dir)) {</span>
+      // No need to remove the build location because it does not exist
+<span class="cstat-no" title="statement not covered" >      return</span>
+    }
+&nbsp;
+    // Let's clean up the entire build
+<span class="cstat-no" title="statement not covered" >    fs.removeSync(this.context.product.build.dir)</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  st</span>art() {
+<span class="cstat-no" title="statement not covered" >    return new Promise(<span class="fstat-no" title="function not covered" >(r</span>esolve, reject) =&gt; {</span>
+      // Let's start off by cleaning the previous build
+<span class="cstat-no" title="statement not covered" >      this.clean()</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      new WebpackDevServer(webpack(this.config.builder), this.config.server).</span>
+        listen(this.context.engine.port, this.context.engine.host, <span class="fstat-no" title="function not covered" >(e</span>rror) =&gt; {
+<span class="cstat-no" title="statement not covered" >          if (error) {</span>
+            // Looks like webpack failed with a hard error
+<span class="cstat-no" title="statement not covered" >            reject(error)</span>
+<span class="cstat-no" title="statement not covered" >            return</span>
+          }
+&nbsp;
+          // Start a development API
+          const apiUrl = <span class="cstat-no" title="statement not covered" >'http://localhost:' + this.context.product.cloud.api.settings.port</span>
+<span class="cstat-no" title="statement not covered" >          utils.logger.info("API started at " + apiUrl)</span>
+<span class="cstat-no" title="statement not covered" >          bindi.start(this.context.specFile, "api")</span>
+&nbsp;
+          // Open a browser with the website loaded
+          const url = <span class="cstat-no" title="statement not covered" >'http://' + this.context.engine.host + ':' + this.context.engine.port</span>
+<span class="cstat-no" title="statement not covered" >          utils.logger.info("Web started at " + url)</span>
+<span class="cstat-no" title="statement not covered" >          utils.core.openUrl(url);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >          resolve()</span>
+        })
+    })
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  bu</span>ild() {
+<span class="cstat-no" title="statement not covered" >    return new Promise(<span class="fstat-no" title="function not covered" >(r</span>esolve, reject) =&gt; {</span>
+      // Let's start off by cleaning the previous build
+<span class="cstat-no" title="statement not covered" >      this.clean()</span>
+&nbsp;
+      const builder = <span class="cstat-no" title="statement not covered" >webpack(this.config.builder, <span class="fstat-no" title="function not covered" >(e</span>rror, stats) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        if (error) {</span>
+          // Looks like webpack failed with a hard error
+<span class="cstat-no" title="statement not covered" >          reject(error)</span>
+<span class="cstat-no" title="statement not covered" >          return</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (stats.compilation.errors &amp;&amp; stats.compilation.errors.length &gt; 0) {</span>
+          // Webpack attempted to build but it failed
+<span class="cstat-no" title="statement not covered" >          reject(stats.compilation.errors[0])</span>
+<span class="cstat-no" title="statement not covered" >          return</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        resolve(builder)</span>
+      })
+    })
+  }
+}
+&nbsp;
+module.exports = Engine
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Aug 30 2017 14:36:54 GMT+0300 (EEST)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
